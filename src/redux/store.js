@@ -36,7 +36,7 @@ const store = createStore((state,action)=>{
         },
         {
             id:3,
-            text:'jAVASCRIPT',
+            text:'JAVASCRIPT',
             check:false,
         },
     ]
