@@ -1,0 +1,12 @@
+@import '../../assets/style/varible.scss';
+
+.todo-list{
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: start;
+    border-radius: 20px;
+   
+}

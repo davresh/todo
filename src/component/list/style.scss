@@ -1,0 +1,26 @@
+@import '../../assets/style/varible.scss';
+
+.todo-list-text{
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    font-family: 'Lucida Sans';
+    span{
+        color: white;
+        padding: 5px 8px;
+        font-size: 25px;
+        background-color: $blue;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all .3s;
+        &:hover{
+            background: #ccc;
+            color:black;
+        }
+    }
+}
