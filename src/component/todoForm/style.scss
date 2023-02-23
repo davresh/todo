@@ -1,0 +1,38 @@
+@import '../../assets/style/varible.scss';
+.todoForm{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: sticky;top: 0;
+    padding: $pd;
+    background: #fff;
+    border-radius: $bd;
+    input,button{
+        height: fit-content;
+        border: none;
+        outline: 0;
+        border-radius: 8px;
+        padding: 10px 7px;
+        font-size: 23px;
+    }
+    input{
+        width: 75%;
+        border: 2px solid $green;
+    }
+    .erorr{
+        border-color: red;
+    }
+    button{
+        width: 20%;
+        border: 2px solid $green;
+        background: $bg;
+        color: white;
+        transition: all .3s;
+        cursor: pointer;
+        &:hover{
+            background: #ccc;
+            color: black;
+        }
+    }
+}
