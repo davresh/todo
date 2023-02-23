@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/todo/static/css/main.555d4c9a.css",
-    "main.js": "/todo/static/js/main.d1e96858.js",
-    "static/media/icomoon.eot?tnabai": "/todo/static/media/icomoon.f86e611971c24a176300.eot",
-    "static/media/icomoon.woff?tnabai": "/todo/static/media/icomoon.7dbc2d9deecae33e6ea3.woff",
-    "static/media/icomoon.ttf?tnabai": "/todo/static/media/icomoon.d6681dc5fde2808d40c2.ttf",
-    "static/media/icomoon.svg?tnabai": "/todo/static/media/icomoon.69492af95e433c41b422.svg",
+    "main.css": "/todo/static/css/main.b398c587.css",
+    "main.js": "/todo/static/js/main.9bd5aca7.js",
+    "static/media/icomoon.eot?qwfrns": "/todo/static/media/icomoon.8fb2521e1f8b3790a0d9.eot",
+    "static/media/icomoon.woff?qwfrns": "/todo/static/media/icomoon.884b771535ec6db48855.woff",
+    "static/media/icomoon.svg?qwfrns": "/todo/static/media/icomoon.470f1d07977d6cbd4187.svg",
+    "static/media/icomoon.ttf?qwfrns": "/todo/static/media/icomoon.b41ffc9ea883d286e91b.ttf",
     "index.html": "/todo/index.html",
-    "main.555d4c9a.css.map": "/todo/static/css/main.555d4c9a.css.map",
-    "main.d1e96858.js.map": "/todo/static/js/main.d1e96858.js.map"
+    "main.b398c587.css.map": "/todo/static/css/main.b398c587.css.map",
+    "main.9bd5aca7.js.map": "/todo/static/js/main.9bd5aca7.js.map"
   },
   "entrypoints": [
-    "static/css/main.555d4c9a.css",
-    "static/js/main.d1e96858.js"
+    "static/css/main.b398c587.css",
+    "static/js/main.9bd5aca7.js"
   ]
 }
