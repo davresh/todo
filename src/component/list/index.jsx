@@ -1,54 +1,36 @@
 
-import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { changeInput } from '../../redux/inputValueSlice';
+import { changeTodoInput, deletTodo } from '../../redux/todoSlice';
 import './style.scss';
 
 function List({list}){
     const dispatch = useDispatch()
     
     return (
-        <li className={`todo-list-text ${list.tagClass}`}>
-            <h3>
+        <li className={`todo-list-text ${list.tagClass}`} >
                 <input 
                     type="checkbox" 
                     defaultChecked={list.check} 
                     onClick={(e)=>{
-                        dispatch({
-                            type:'checked',
-                            payload:{
-                                ...list,
-                                check:e.target.checked
-                            },
-                        })
+                        dispatch(changeTodoInput(list,e.target.checked))
                     }}
+                    id={list.text+list.id}
                 />
-                {list.text}
-                </h3>
-                <p>
-                <span className='icon-pencil-solid'onClick={()=>{
-                    dispatch({
-                        type:'delet',
-                        payload:{
-                            id:list.id,
-                        }
-                    })
-                    dispatch({
-                        type:'changeText',
-                        payload:{
-                            inpVal:list.text
-                        }
-                    })
-                }}/>
-                <span className='icon-trash-solid' onClick={()=>{
-                    dispatch({
-                        type:'delet',
-                        payload:{
-                            id:list.id,
-                        }
-                    })
-                }}/>
-                </p>
-
+                <label htmlFor={list.text+list.id}>
+                    <span className={`todo-text ${list.check?'delet-text':''}`}>
+                        {list.text}
+                    </span>
+                    <p>
+                        <span className='icon-pencil-solid todo-icon'onClick={()=>{
+                        dispatch(deletTodo(list))
+                        dispatch(changeInput(list))
+                        }}/>
+                        <span className='icon-trash-solid todo-icon' onClick={()=>{
+                            dispatch(deletTodo(list))
+                        }}/>
+                    </p>
+                </label>
         </li>
     )
 }

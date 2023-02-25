@@ -1,6 +1,8 @@
 import './style.scss';
 import { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { addTodoList } from '../../redux/todoSlice';
+import { deleteValue } from '../../redux/inputValueSlice';
 
 function TodoForm(){
     const dispatch = useDispatch()
@@ -8,9 +10,7 @@ function TodoForm(){
     const inpValue = useSelector(state => state.inpVal)
     const textRef = useRef()
     useEffect(()=>{
-        console.log('text');
         textRef.current.value = inpValue
-        
     },[inpValue])
     return (
         <>
@@ -24,19 +24,8 @@ function TodoForm(){
                     e.preventDefault()
                     if(textRef.current.value !== ''){
                         textRef.current.classList.remove('erorr');
-                        dispatch({
-                            type:'add',
-                            payload:{
-                                id:box.length,
-                                text:textRef.current.value,
-                                check:false,
-                                tagClass:'todo-anim'
-                            }
-                        })
-                        console.log(box.length);
-                        dispatch({
-                            type:'deletInp',
-                        })
+                        dispatch(addTodoList(box,textRef))
+                        dispatch(deleteValue())
                         textRef.current.value = '';
                     }else{
                         textRef.current.classList.add('erorr');

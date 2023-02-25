@@ -1,5 +1,6 @@
 
 import { useDispatch, useSelector } from 'react-redux';
+import { deleteTodoChecked } from '../../redux/todoSlice';
 import './style.scss';
 
 function TodoSelect(){
@@ -11,10 +12,7 @@ function TodoSelect(){
         <div className='todo-select'>
           <span>{check}/{box.length}</span>
           <button onClick={()=>{
-            dispatch({
-              type:'deleteChecked',
-            })
-            
+            dispatch(deleteTodoChecked())
           }}>Remove checked</button>
         </div>
     )
